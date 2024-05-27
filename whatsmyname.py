@@ -47,7 +47,7 @@ def banner():
 
 # Get data from the 'wmn-data.json' file
 def read_json():
-    with open("wmn-data.json", "r", encoding="utf-8") as f:
+    with open("/usr/local/bin/wmn-data.json", "r", encoding="utf-8") as f:
         data = json.load(f)
         return data
 
@@ -174,7 +174,7 @@ if __name__ == "__main__":
         for i in tqdm(range(10)):
             time.sleep(0.1)
         search_word = "uri_check"
-        with open("wmn-data.json", "r") as f:
+        with open("/usr/local/bin/wmn-data.json", "r") as f:
             data = f.read()
             total = data.count(search_word)
             print(
